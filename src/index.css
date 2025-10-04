@@ -1,0 +1,35 @@
+.custom-pagination .page-item .page-link {
+  color: #20c997;
+  border-color: #20c997;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-pagination .page-item.active .page-link,
+.custom-pagination .page-item .page-link:hover {
+  background-color: #20c997;
+  color: #fff;
+  border-color: #20c997;
+}
+
+
+.custom-btn-pagination .btn {
+  min-width: 36px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #2ab7a9;
+}
+
+.custom-btn-pagination .btn:hover {
+  background-color: #2ab7a9;
+  color: white;
+  border-color: #2ab7a9;
+}
+
+.custom-btn-pagination .active-page {
+  background-color: #2ab7a9;
+  color: #fff;
+  border-color: #2ab7a9;
+}
+/* Remove focus/active outline from recharts PieChart slices */

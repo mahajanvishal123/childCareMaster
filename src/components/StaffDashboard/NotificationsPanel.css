@@ -1,0 +1,98 @@
+/* Main background layout */
+.notifications-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  /* Notification container */
+  .notifications-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+  }
+  
+  /* Tab buttons layout */
+  .tab-btn {
+    flex: 1;
+    border: none;
+    border-radius: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn:hover {
+    background-color: #2ab7a9;
+    color: white;
+  }
+  
+  .tab-btn.active {
+    background-color: #2ab7a9 !important;
+    color: white !important;
+  }
+  
+  /* Notification card appearance */
+  .notification-card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Each notification block */
+  .notification-item {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notification-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  /* Notification icon spacing */
+  .notification-icon {
+    margin-top: 5px;
+    margin-right: 1rem;
+    color: #2ab7a9;
+  }
+  
+  /* Footer meta info */
+  .notification-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #6c757d;
+    flex-wrap: wrap;
+  }
+  
+  .notification-meta a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #2ab7a9;
+  }
+  
+  .notification-meta a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 576px) {
+    .notification-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .notification-meta a {
+      margin-left: 0;
+    }
+  
+    .tab-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+  

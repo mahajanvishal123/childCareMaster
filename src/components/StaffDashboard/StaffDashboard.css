@@ -1,0 +1,142 @@
+/* src/components/StaffPanel.css */
+
+.dashboard-container {
+    /* background-color: #2ab7a9; */
+    min-height: 80vh;
+    padding: 20px;
+    color: #000;
+  }
+  
+  .welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .assigned-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2ab7a9;
+  }
+  
+  .child-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    border: 2px solid #2ab7a9;
+  }
+  
+  .child-more {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .reminder-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reminder-list li {
+    margin-bottom: 15px;
+  }
+  
+  .reminder-date {
+    font-size: 0.8rem;
+    color: #888;
+    display: block;
+  }
+  
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  
+  .tag.red {
+    background-color: #f8d7da;
+    color: #dc3545;
+  }
+  
+  .tag.yellow {
+    background-color: #fff3cd;
+    color: #ffc107;
+  }
+  
+  .tag.green {
+    background-color: #d4edda;
+    color: #28a745;
+  }
+  
+  .tag.blue {
+    background-color: #d1ecf1;
+    color: #17a2b8;
+  }
+  
+  .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .activity-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  
+  .activity-time {
+    font-weight: 600;
+    width: 80px;
+    color: #555;
+  }
+  
+  .activity-detail {
+    flex-grow: 1;
+    color: #333;
+  }
+  
+  .activity-user {
+    color: #999;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .child-avatar,
+  .child-more {
+    width: 40px;
+    height: 40px;
+  }
+
+  .assigned-number {
+    font-size: 2rem;
+  }
+
+  .activity-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }

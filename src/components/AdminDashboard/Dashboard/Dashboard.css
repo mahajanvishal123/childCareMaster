@@ -1,0 +1,17 @@
+/* Remove focus outline/border from recharts charts and all SVG elements inside dashboard */
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-responsive-container:focus,
+.recharts-pie:focus,
+.recharts-pie-sector:focus,
+.recharts-layer:focus,
+.recharts-sector:focus,
+svg:focus,
+g:focus,
+.pie:focus,
+.pie-chart:focus,
+* :focus {
+  outline: none !important;
+  box-shadow: none !important;
+  /* border: none !important; */
+}

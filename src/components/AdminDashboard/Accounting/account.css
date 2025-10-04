@@ -1,0 +1,10 @@
+.dropdown-icon {
+    position: absolute;
+    right: 20px;
+    /* Position the icon inside the select */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center the icon vertically */
+    pointer-events: none;
+    /* Prevent the icon from interfering with select clicks */
+}

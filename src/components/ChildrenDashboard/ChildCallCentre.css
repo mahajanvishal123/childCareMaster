@@ -1,0 +1,102 @@
+.chat-container {
+  display: flex;
+  height: 90vh;
+  font-family: Arial, sans-serif;
+}
+
+.teacher-list {
+  width: 25%;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.teacher {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.teacher:hover,
+.teacher.selected {
+  background-color: #e0e0e0;
+}
+
+.chat-window {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.chat-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.message-bubble {
+  max-width: 70%;
+  margin: 0.5rem 0;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-bubble.sent {
+  background-color: #d1e7dd;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message-bubble.received {
+  background-color: #f8d7da;
+  margin-right: auto;
+  text-align: left;
+}
+
+.message-content {
+  font-size: 14px;
+}
+
+.message-timestamp {
+  font-size: 10px;
+  color: #555;
+  margin-top: 3px;
+}
+
+.chat-input {
+  display: flex;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.no-teacher-selected {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 18px;
+  color: #777;
+}

@@ -1,0 +1,56 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+  }
+  
+
+  /* Scrollbar width and height */
+::-webkit-scrollbar {
+    width: 6px;      /* vertical scrollbar */
+    height: 6px;     /* horizontal scrollbar */
+  }
+  
+  /* Track (background of scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #2ab7a9; /* Your theme color */
+    border-radius: 10px;
+  }
+  
+  /* Hover effect on scrollbar handle */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #24998f;
+  }
+  
+
+  .modal-dialog{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+
+  .recharts-pie-sector:focus {
+  outline: none !important;
+  stroke: none !important;
+}
+.recharts-pie-sector:active {
+  outline: none !important;
+  stroke: none !important;
+}
+
+.recharts-pie-sector {
+  outline: none !important;
+}
+
+.recharts-pie-sector:focus {
+  outline: none;
+}
+
+.recharts-pie-sector:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+
+  .navbar-custom {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;       /* 👈 Fix it to top */
+    top: 0;                /* 👈 Stick to top */
+    left: 0;
+    right: 0;
+    z-index: 1030;         /* 👈 Keep it above other content (like Bootstrap's default) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* optional shadow */
+  }
+  
+  .navbar-logo {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .navbar-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+
+  
+  /* Toggle button wrapper */
+.toggle-container {
+  top: 8px;
+  left: 15px;
+  z-index: 1050;
+  position: absolute;
+
+  }
+  
+  /* Toggle button appearance */
+  .toggle-btn {
+    padding: 4px 8px;
+    font-size: 1rem;
+    height: 32px;
+    line-height: 1;
+    border-radius: 4px;
+
+  
+  }
+
+  .text-uppercase.text-muted.small.fw-bold.mb-2 {
+    font-size: 1rem; /* Default size for larger screens */
+  }
+  
+  /* Navbar styling remains same */
+  
+    
