@@ -1,20 +1,35 @@
-
 import { Container, Row, Col, Form, InputGroup, Dropdown } from 'react-bootstrap';
 import { FaSearch, FaBell, FaBars } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // 🔁 Import navigation hook
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import axios
 import './Navbar.css';
 import logo from '../../assets/logo.png';
-
+import axiosInstance from '../../utils/axiosInstance';
+import { BASE_URL } from '../../utils/config';
 
 const Navbar = ({ toggleSidebar }) => {
   const navigate = useNavigate();
   const role = localStorage.getItem('role');
+  const token = localStorage.getItem('token'); // Assuming you store token in localStorage
 
-
-  const handleLogout = () => {
-    // localStorage.removeItem('role');
-    localStorage.clear();
-    navigate('/');
+  const handleLogout = async () => {
+    try {
+      // Make API call to logout endpoint
+      const response = await axiosInstance.post(
+        `${BASE_URL}/users/logout`
+      );
+      
+      // If logout is successful, clear localStorage and navigate to login
+      if (response.status === 200) {
+        localStorage.clear();
+        navigate('/');
+      }
+    } catch (error) {
+      console.error('Logout failed:', error);
+      // Even if API fails, we can still clear local storage and redirect
+      localStorage.clear();
+      navigate('/');
+    }
   };
 
   return (
@@ -25,7 +40,7 @@ const Navbar = ({ toggleSidebar }) => {
             <img src={logo} alt="logo" className="navbar-logo m-2" />
             <span className="navbar-title">KidiCloud</span>
             <div className="toggle-container d-md-none mt-3">
-              <button  className="btn btn-sm btn-light toggle-btn"
+              <button className="btn btn-sm btn-light toggle-btn"
                 onClick={toggleSidebar}>
                 <FaBars />
               </button>
@@ -33,13 +48,6 @@ const Navbar = ({ toggleSidebar }) => {
           </Col>
 
           <Col xs="auto" className="d-flex align-items-center gap-3">
-            {/* <InputGroup className="d-none d-md-flex">
-              <InputGroup.Text>
-                <FaSearch />
-              </InputGroup.Text>
-              <Form.Control type="text" placeholder="Search..." />
-            </InputGroup> */}
-
             <Dropdown align="end">
               <Dropdown.Toggle as="div" className="cursor-pointer d-flex align-items-center">
                 <img
@@ -51,12 +59,9 @@ const Navbar = ({ toggleSidebar }) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-    <Dropdown.Item onClick={() => navigate("/profile")}>My Profile</Dropdown.Item>
-    <Dropdown.Item onClick={() => navigate("/change-password")}>Change Password</Dropdown.Item>
-    <Dropdown.Item onClick={() => {
-      handleLogout(); // call logout function
-      navigate("/"); // redirect to login page
-    }}>Logout</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate("/profile")}>My Profile</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate("/change-password")}>Change Password</Dropdown.Item>
+                <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
 
